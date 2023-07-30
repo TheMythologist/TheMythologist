@@ -27,7 +27,7 @@
 
 ### Open-source Projects
 
-|🎁 Project|📙 Description|
-|--|--|
-|CAPEv2|Automated malware analysis sandbox|
-|Guardian|GTA Online custom firewall|
+| 🎁 Project                                            | 📙 Description                                      | ⭐ Stars                                                                                                  | 📚 Forks                                                                                                 |
+| ------------------------------------------------------ | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [CAPEv2](https://github.com/kevoreilly/CAPEv2)         | Malware Configuration And Payload Extraction sandbox | ![Stars](https://img.shields.io/github/stars/kevoreilly/CAPEv2?style=flat-square&labelColor=343b41)       | ![Forks](https://img.shields.io/github/forks/kevoreilly/CAPEv2?style=flat-square&labelColor=343b41)       |
+| [Guardian](https://github.com/TheMythologist/guardian) | GTA Online custom firewall                           | ![Stars](https://img.shields.io/github/stars/TheMythologist/guardian?style=flat-square&labelColor=343b41) | ![Forks](https://img.shields.io/github/forks/TheMythologist/guardian?style=flat-square&labelColor=343b41) |
