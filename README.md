@@ -4,6 +4,7 @@
 
 ## Things I work with
 
+![Ansible](https://img.shields.io/badge/Ansible-black?style=flat-square&logo=ansible&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=nextdotjs&logoColor=white)
 ![git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-fe6601?style=flat-square&logo=rabbitmq&logoColor=white)
