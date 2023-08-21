@@ -1,10 +1,25 @@
-# <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey there!
+import colorsys
+import math
+import re
 
-![TheMythologist's GitHub stats](https://github-readme-stats-themythologist.vercel.app/api?username=TheMythologist&show_icons=true&theme=solarized-dark&bg_color=00000000&hide_border=true&include_all_commits=true)
 
-## Things I work with
+def step(r, g, b, repetitions=1):
+    lum = math.sqrt(0.241 * r + 0.691 * g + 0.068 * b)
+    h, s, v = colorsys.rgb_to_hsv(r, g, b)
+    h2 = int(h * repetitions)
+    # lum2 = int(lum * repetitions)
+    v2 = int(v * repetitions)
+    if h2 % 2 == 1:
+        v2 = repetitions - v2
+        lum = repetitions - lum
+    return (h2, lum, v2)
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+
+def hex_to_rgb(hex_color: str) -> tuple[int, int, int]:
+    return tuple(int(hex_color[i : i + 2], 16) for i in range(0, len(hex_color), 2))
+
+
+badges = """![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
 ![Jinja](https://img.shields.io/badge/Jinja-B41717?style=flat-square&logo=jinja&logoColor=white)
 ![git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
@@ -37,12 +52,11 @@
 ![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=flat-square&logo=storybook&logoColor=white)
 ![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat-square&logo=minio&logoColor=white)
 ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
-![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-gray?style=flat-square&logo=flask&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)""".split(
+    "\n"
+)
+colors = list({re.search(r"/(.+)-(.+)\?style", idk)[2] for idk in badges})
+colors.sort(key=lambda hex_color: step(*hex_to_rgb(hex_color), 8))
+print(colors)
 
-### Open-source Projects
-
-| 🎁 Project                                            | 📙 Description                                      | ⭐ Stars                                                                                                  | 📚 Forks                                                                                                 |
-| ------------------------------------------------------ | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| [CAPEv2](https://github.com/kevoreilly/CAPEv2)         | Malware Configuration And Payload Extraction sandbox | ![Stars](https://img.shields.io/github/stars/kevoreilly/CAPEv2?style=flat-square&labelColor=343b41)       | ![Forks](https://img.shields.io/github/forks/kevoreilly/CAPEv2?style=flat-square&labelColor=343b41)       |
-| [Guardian](https://github.com/TheMythologist/guardian) | GTA Online custom firewall                           | ![Stars](https://img.shields.io/github/stars/TheMythologist/guardian?style=flat-square&labelColor=343b41) | ![Forks](https://img.shields.io/github/forks/TheMythologist/guardian?style=flat-square&labelColor=343b41) |
+# ![Flask](https://img.shields.io/badge/Flask-gray?style=flat-square&logo=flask&logoColor=white)
