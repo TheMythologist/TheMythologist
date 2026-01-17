@@ -54,13 +54,14 @@ badges = """![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-sq
 ![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat-square&logo=minio&logoColor=white)
 ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
-![Go](https://img.shields.io/badge/Go-74CEDF?style=flat-square&logo=go&logoColor=white)
-![Expo](https://img.shields.io/badge/Expo-01001B?style=flat-square&logo=expo&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-2695D5?style=flat-square&logo=sqlite&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Expo](https://img.shields.io/badge/Expo-1C2024?style=flat-square&logo=expo&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-![supabase](https://img.shields.io/badge/supabase-289A69?style=flat-square&logo=supabase&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-2E6CE6?style=flat-square&logo=kubernetes&logoColor=white)
-![Turso](https://img.shields.io/badge/Turso-4EF9D2?style=flat-square&logo=turso&logoColor=white)""".split(
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Turso](https://img.shields.io/badge/Turso-4FF8D2?style=flat-square&logo=turso&logoColor=white)
+![PostHog](https://img.shields.io/badge/PostHog-000000?style=flat-square&logo=posthog&logoColor=white)""".split(
     "\n"
 )
 print("\n".join(sorted(badges, key=lambda badge: step(*hex_to_rgb(re.search(r"/(.+)-(.+)\?style", badge)[2]), 8))))
