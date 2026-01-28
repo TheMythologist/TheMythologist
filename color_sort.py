@@ -61,7 +61,10 @@ badges = """![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-sq
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 ![Turso](https://img.shields.io/badge/Turso-4FF8D2?style=flat-square&logo=turso&logoColor=white)
-![PostHog](https://img.shields.io/badge/PostHog-000000?style=flat-square&logo=posthog&logoColor=white)""".split(
+![PostHog](https://img.shields.io/badge/PostHog-000000?style=flat-square&logo=posthog&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=posthog&logoColor=white)
+![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=flat-square&logo=posthog&logoColor=white)
+![Nest](https://img.shields.io/badge/Nest-E0234E?style=flat-square&logo=posthog&logoColor=white)""".split(
     "\n"
 )
 print("\n".join(sorted(badges, key=lambda badge: step(*hex_to_rgb(re.search(r"/(.+)-(.+)\?style", badge)[2]), 8))))
